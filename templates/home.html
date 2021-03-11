@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css" />
+    <title> Boggle Game</title>
+</head>
+<body>
+    <h1> Boggle Game!</h1>
+    <div class="container">
+        <div class="board-form-container">
+            <table class="board">
+                <tbody class="table-body">
+                    {% for row in boggle_board %}
+                    <tr class="table-row">
+                        {% for cell in row %}
+                        <td class="table-cell">
+                            {{cell}}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <form method="POST" class="user-word">
+                <input type="text" name="word" id="word">
+                <button class="submit"> Submit!</button>
+            </form>
+        </div>
+
+        <div class="info-container">
+            <p class="msg"></p>
+            <p id="timer"> Time Left: <b id="time">20</b> Seconds</p>
+            <p> Score: <b class="score"> 0 </b> </p>
+            <p> Highscore <b id="highscore">{{highscore}}</b></p>
+            <p id="game"> Game: <b> {{nplays}} </b></p>
+
+            <div class="words-container">
+                Guessed words:
+                <ul class="word-container">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>

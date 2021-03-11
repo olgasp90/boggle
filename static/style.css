@@ -1,0 +1,56 @@
+body {
+	position: relative;
+	font-family: 'Raleway', sans-serif;
+}
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+}
+
+.info-container {
+	margin-top: 0;
+	margin-left: 25px;
+	text-align: left;
+}
+
+.user-word {
+	margin: 20px auto;
+	text-align: center;
+}
+
+#word {
+	padding: 4px;
+	border: 1px solid black;
+	border-radius: 8px;
+}
+
+.word {
+	box-sizing: border-box;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.table-cell {
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 20px;
+	background-color: aliceblue;
+}
+
+.submit {
+	background-color: aliceblue;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 4px;
+}
+.submit:hover {
+	cursor: pointer;
+}
